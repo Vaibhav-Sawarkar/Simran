@@ -1,0 +1,66 @@
+flight-booking-frontend/
+├── src/
+│   ├── app/
+│   │   ├── core/                       # Core singleton services and utils
+│   │   │   ├── guards/                 # Route guards
+│   │   │   │   ├── auth.guard.ts
+│   │   │   │   └── admin.guard.ts
+│   │   │   ├── interceptors/           # HTTP interceptors
+│   │   │   │   └── auth.interceptor.ts
+│   │   │   ├── services/               # Core services
+│   │   │   │   ├── auth.service.ts
+│   │   │   │   ├── api.service.ts
+│   │   │   │   └── jwt-helper.service.ts
+│   │   │   └── models/                 # Data models
+│   │   │       ├── user.model.ts
+│   │   │       └── flight.model.ts
+│   │   │
+│   │   ├── modules/                    # Feature modules
+│   │   │   ├── flight/                 # Flight booking
+│   │   │   │   ├── flight-search/
+│   │   │   │   ├── flight-details/
+│   │   │   │   └── flight.module.ts
+│   │   │   ├── booking/                # Booking management
+│   │   │   │   ├── booking-create/
+│   │   │   │   ├── booking-list/
+│   │   │   │   └── booking.module.ts
+│   │   │   └── admin/                  # Admin panel
+│   │   │       ├── user-management/
+│   │   │       ├── flight-management/
+│   │   │       └── admin.module.ts
+│   │   │
+│   │   ├── shared/                     # Shared components/pipes/directives
+│   │   │   ├── components/
+│   │   │   │   ├── navbar/
+│   │   │   │   ├── alert/
+│   │   │   │   └── loading-spinner/
+│   │   │   ├── pipes/
+│   │   │   │   └── date-format.pipe.ts
+│   │   │   └── shared.module.ts        # Exports shared items
+│   │   │
+│   │   ├── views/                      # Entry point views
+│   │   │   ├── auth/                   # Authentication
+│   │   │   │   ├── login/
+│   │   │   │   └── register/
+│   │   │   └── error/                  # Error pages
+│   │   │       ├── not-found/
+│   │   │       └── server-error/
+│   │   │
+│   │   ├── app.component.ts            # Root component
+│   │   ├── app.module.ts               # Root module
+│   │   └── app-routing.module.ts       # Main routes
+│   │
+│   ├── assets/                         # Static files
+│   │   ├── images/
+│   │   ├── styles/                     # Global styles
+│   │   │   └── _variables.scss
+│   │   └── fonts/
+│   │
+│   ├── environments/                   # Environment configs
+│   │   ├── environment.ts
+│   │   └── environment.prod.ts
+│   │
+│   └── index.html                      # Main HTML
+│
+├── angular.json                        # CLI config
+└── package.json                        # Dependencies
